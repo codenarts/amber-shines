@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber Shines</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+    *,
+    *::after *::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+    .background {
+        position: absolute;
+        left: -380px;
+        top: -1px;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .overlay-background {
+        position: absolute;
+        left: 40%;
+        top: -1px;
+        z-index: -1;
+        width: 100%;
+        height: 80vh;
+    }
+
+    .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 30px;
+    }
+
+    .logo-title {
+        font-family: 'Audiowide', 'sans-serif';
+        font-size: 42px;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .navigation a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        margin-right: 30px;
+    }
+
+    .navigation a::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+        width: 100%;
+        height: 2px;
+        background: black;
+        transform: scaleX(0);
+        transition: transform .5s;
+    }
+
+    .navigation a:hover::after {
+        transform: scaleX(0.8);
+    }
+
+    .tab {
+        font-family: 'Audiowide', 'sans-serif';
+        font-size: 18px;
+    }
+
+    .active-tab {
+        font-family: 'Audiowide', 'sans-serif';
+        font-size: 18px;
+        color: rgb(7, 124, 120);
+    }
+
+    .button-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-button,
+    .register-button {
+        border: none;
+        background-color: transparent;
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        margin-left: 20px;
+        position: relative;
+    }
+
+    .login-button img,
+    .register-button img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .login-button:hover,
+    .register-button:hover {
+        animation-name: button-hover;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes button-hover {
+        from {
+            scale: 1;
+        }
+
+        to {
+            scale: 0.7;
+        }
+    }
+
+    .para {
+        position: absolute;
+        margin-top: 450px;
+        margin-left: 60px;
+        font-size: 50px;
+        font-family: "Josefin Sans";
+        color: #777;
+    }
+    
+    .image-1 {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 90px;
+        width: 290px;
+        height: 410px;
+        border-radius: 40px 10px;
+        box-shadow: 9px 9px 16px 0 rgba(73, 73, 89, 0.2);
+    }
+
+    .image-2 {
+        position: absolute;
+        margin-top: 290px;
+        margin-left: 315px;
+        width: 200px;
+        height: 300px;
+        border-radius: 90px 10px;
+        box-shadow: 9px 9px 16px 0 rgba(73, 73, 89, 0.2);
+    }
+
+    .about {
+        position: absolute;
+        top: 200px;
+        margin-left: 50px;
+        font-size: 130px;
+        text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+        font-family: "Audiowide";
+    }
+
+    .paragraph {
+        position: absolute;
+        left: 60px;
+        top: 380px;
+        font-size: 30px;
+        font-family: "Poppins";
+        color: #222;
+    }
+
+    .art-box {
+        position: absolute;
+        left: 70%;
+        top: 40%;
+    }
+</style>
+
+<body>
+    <img src="background-about.jpg" class="background">
+    <img src="overlay-background-about.svg" class="overlay-background">
+    <div class="top-bar">
+        <p class="logo-title">amber shines</p>
+        <nav class="navigation">
+            <a href="index.html">
+                <p class="tab">home</p>
+            </a>
+            <a href="collections.html">
+                <p class="tab">collections</p>
+            </a>
+            <a href="about.html">
+                <p class="active-tab">about</p>
+            </a>
+        </nav>
+        <div class="button-container">
+            <a href="login.html">
+                <button class="login-button">
+                    <img
+                        src="https://img.icons8.com/external-kmg-design-flat-kmg-design/64/null/external-login-real-estate-kmg-design-flat-kmg-design.png" />
+                </button>
+            </a>
+            <a href="register.html">
+                <button class="register-button">
+                    <img
+                        src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/null/external-user-medical-kiranshastry-lineal-color-kiranshastry.png" />
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="art-box">
+        <img class="image-1" src="jewel-2.avif">
+        <img class="image-2" src="jewel-4.avif">
+        <div class="para">Crafting <br> Excellence</div>
+    </div>
+    <div class="about">Our Story</div>
+    <div class="paragraph">
+        Every Story has a beginning, but ours has a beautiful beginning. <br> 
+        Amber Shines Jewellery began in 1995 with a thought to change the <br> way imitation jewellery was seen
+        & with the idea to make the brand a <br>synonym to fashion jewellery.
+        <br>
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        We grew into a renowned house at the forefront of innovative <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        jewelry design with expert craftsmanship.
+    </div>
+</body>
+
+</html>

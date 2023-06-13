@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amber Shines</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Sen:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+    *,
+    *::after *::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+    .background {
+        position: absolute;
+        left: 0px;
+        top: -1px;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .overlay-background {
+        position: absolute;
+        left: 40%;
+        top: -1px;
+        z-index: -1;
+        /* object-fit: cover; */
+        width: 100%;
+        height: 80vh;
+    }
+
+    .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 30px;
+    }
+
+    .logo-title {
+        font-family: 'Audiowide', 'sans-serif';
+        font-size: 42px;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .navigation a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        margin-right: 30px;
+    }
+
+    .navigation a::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 10px;
+        width: 100%;
+        height: 2px;
+        background: black;
+        transform: scaleX(0);
+        transition: transform .5s;
+    }
+
+    .navigation a:hover::after {
+        transform: scaleX(0.8);
+    }
+
+    .tab {
+        font-family: 'Audiowide', 'sans-serif';
+        font-size: 18px;
+    }
+
+    .active-tab {
+        font-family: 'Audiowide', 'sans-serif';
+        font-size: 18px;
+        color: rgb(7, 124, 120);
+    }
+
+    .button-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-button,
+    .register-button {
+        border: none;
+        background-color: transparent;
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        margin-left: 20px;
+        position: relative;
+    }
+
+    .login-button img,
+    .register-button img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .login-button:hover,
+    .register-button:hover {
+        animation-name: button-hover;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes button-hover {
+        from {
+            scale: 1;
+        }
+
+        to {
+            scale: 0.7;
+        }
+    }
+
+    .center-heading {
+        position: absolute;
+        left: 300px;
+        top: 150px;
+        width: 900px;
+    }
+
+    .center-title {
+        font-family: 'Sen';
+        font-size: 64px;
+    }
+
+    .shop-button {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Poppins';
+        font-size: 18px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .shop-button:hover {
+        animation-name: hover;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes hover {
+        to {
+            background-color: #eee;
+            color: #333;
+            font-family: 'Poppins';
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+</style>
+
+<body>
+    <img src="background-11.jpg" class="background">
+    <img src="overlay-background.svg" class="overlay-background">
+    <div class="top-bar">
+        <p class="logo-title">amber shines</p>
+        <nav class="navigation">
+            <a href="index.html">
+                <p class="active-tab">home</p>
+            </a>
+            <a href="collections.html">
+                <p class="tab">collections</p>
+            </a>
+            <a href="about.html">
+                <p class="tab">about</p>
+            </a>
+        </nav>
+        <div class="button-container">
+            <a href="login.html">
+                <button class="login-button">
+                    <img
+                        src="https://img.icons8.com/external-kmg-design-flat-kmg-design/64/null/external-login-real-estate-kmg-design-flat-kmg-design.png" />
+                </button>
+            </a>
+            <a href="register.html">
+                <button class="register-button">
+                    <img
+                        src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/null/external-user-medical-kiranshastry-lineal-color-kiranshastry.png" />
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="center-heading">
+        <p class="heading">
+        </p>
+        <p class="center-title">
+            Meet the best of <br>
+            the <em>jewels</em>, you have <br>
+            ever seen
+        </p>
+        <a href="collections.html">
+            <button class="shop-button">
+                Explore
+            </button>
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shines</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+    *,
+    *::after *::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .overlay-background {
+        position: absolute;
+        left: 72%;
+        top: 70%;
+        width: 40%;
+        height: 40vh;
+        transform: rotate(80deg);
+    }
+
+    .image {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        right: 30px;
+    }
+
+    .login-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 50vw;
+        height: 100vh;
+    }
+
+    .login-form label {
+        position: relative;
+        top: 0px;
+        left: 5px;
+        color: rgb(107, 105, 105);
+        font-size: 1em;
+    }
+
+
+    .login-form input {
+        position: relative;
+        /* margin-left: 0px; */
+        width: 100%;
+        height: 25px;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid rgb(49, 48, 48);
+        font-size: 1em;
+        /* padding:10px 35px 10px 5px; */
+    }
+
+    .password {
+        color: rgb(88, 86, 86);
+        position: relative;
+        left: 130px;
+    }
+
+    .account {
+        position: relative;
+        color: rgb(88, 86, 86);
+    }
+
+    a:hover {
+        color: blue;
+    }
+
+    button {
+        font-family: "Poppins";
+        width: 120px;
+        height: 30px;
+        position: relative;
+        left: 70px;
+        border-radius: 40px;
+        border: none;
+        background-color: rgb(120, 119, 118);
+        color: white;
+    }
+
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.732);
+    }
+
+    .username-label {
+        position: absolute;
+        color: #000;
+        font-family: "Poppins";
+        top: 520px;
+        transition: top .35s ease-in-out;
+    }
+
+    #email:focus~.username-label {
+        top: 500px;
+        font-weight: bold;
+    }
+
+    .password-label {
+        position: absolute;
+        color: #000;
+        font-family: "Poppins";
+        top: 600px;
+        transition: top .35s ease-in-out;
+    }
+
+    #password:focus~.password-label {
+        top: 580px;
+        font-weight: bold;
+    }
+
+    .title {
+        position: absolute;
+        top: 50px;
+        margin-left: -60px;
+        font-family: "Audiowide";
+        font-size: 50px;
+        font-weight: 300;
+    }
+
+    .title-end {
+        position: absolute;
+        top: 120px;
+        font-family: "Audiowide";
+        font-size: 30px;
+        font-weight: 300;
+        margin-left: 30px;
+    }
+
+    .title-tail {
+        position: absolute;
+        top: 160px;
+        font-family: "Audiowide";
+        font-size: 30px;
+        font-weight: 300;
+        margin-left: 46px;
+    }
+
+    .head {
+        position: absolute;
+        top: 200px;
+        left: 73%;
+        font-family: "Poppins";
+        font-size: 20px;
+    }
+    
+    .age-label, .name-label, .address-label {
+        font-family: "Poppins";
+    }
+
+</style>
+
+<body>
+    <img class="image" src="register-back.avif">
+    <div class="login-form">
+        <img class="overlay-background" src="overlay-background-login.svg" />
+        <form class="box">
+            <a href="index.html"><p class="title">amber shines</p></a>
+            <p class="title-end">Jewellery</p>
+            <p class="title-tail">Register</p>
+            <br>
+
+            <input type="text" id="name" name="name">
+                <p class="name-label">Your full Name</p>
+            </input>
+            
+            <br>
+
+            <input type="number" id="age" name="age">
+                <p class="age-label">Age</p>
+            </input>
+            
+            <br>
+
+            <input type="text" id="address" name="address">
+                <p class="address-label">Address</p>
+            </input>
+            
+            <br>
+
+            <input type="text" id="email" name="email">
+                <p class="username-label">Choose your Username</p>
+            </input>
+            
+            <br><br><br>
+            
+            <input type="text" id="password" name="password">
+                <p class="password-label">Type in your Password</p>
+            </input>
+
+            <br><br>
+
+            <br><br>
+            <button>Register</button><br><br>
+            Already have an account?
+            <a class="account" href="login.html">Login Instead</a>
+        </form>
+    </div>
+</body>
+
+</html>
